@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assest/app.css">
+</head>
+
+<body>
+
+
+  <header>
+    <div class="container">
+      <div class="menu-flex">
+
+        <div class="logo-box">
+          <a href="index.html" title="Anasayfa Link">
+            <img src="./assest/image/logo.png" alt="Logo">
+          </a>
+        </div>
+        <div class="d-flex w-100 justify-content-between align-items-center mobile-menu-box">
+          <div>
+            <span class="nav-location-text">
+              <strong>Deliver to: </strong>
+              <i class="fa-solid fa-location-dot"></i>
+              Current Location
+              <strong>Mirpur 1 Bus Stand, Dhaka</strong>
+            </span>
+          </div>
+          <div class="menu-login-box">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" name="search" id="search" class="form-control" placeholder="Search Food">
+            </div>
+            <button class="btn btn-login">
+              <i class="fa-solid fa-user"></i> Login
+            </button>
+          </div>
+        </div>
+        <button class="burger-menu d-lg-none"
+          onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+          aria-label="Main Menu">
+          <svg width="50" height="50" viewBox="0 0 100 100">
+            <path class="line line1"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path class="line line3"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <section class="hero-section">
+    <div class="container">
+      <div class="row flex-column-reverse flex-md-row align-items-center">
+        <div class="col-md-6 pr-100 column-1">
+          <h1>Are you starving?</h1>
+          <p>Within a few clicks, find meals that
+            are accessible near you</p>
+
+          <div class="tabs-form-box card">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                  type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+
+                  <i class="fa-solid fa-motorcycle"></i>
+                  Delivery
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                  type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Pickup
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="hero-form-box">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <input type="text" class="form-control" placeholder="Enter Your Address">
+                </div>
+                <button class="btn btn-orange">Find Food</button>
+              </div>
+              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                tabindex="0">
+                <div class="hero-form-box">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <input type="text" class="form-control" placeholder="Enter Your Address">
+                </div>
+                <button class="btn btn-orange">Find Food</button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 column-2">
+          <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/hero-header.png"
+            class="banner-img w-100" alt="Noodle Görseli">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="avantage-section">
+    <div class="container">
+      <div class="flex-box">
+        <div class="item">
+          <div class="top">
+            <img src="./assest/image/discount-item-1.png.png" alt="Product 1">
+            <div class="discount-box d-flex justify-content-center align-items-center">
+              <p>15</p>
+              <div>
+                <p>%</p>
+                <p>off</p>
+              </div>
+            </div>
+          </div>
+          <p>Flat Hill Slingback</p>
+          <div class="badge-orange">6 days Remaining</div>
+        </div>
+        <div class="item">
+          <div class="top">
+            <img src="./assest/image/discount-item-2.png.png" alt="Product 1">
+            <div class="discount-box d-flex justify-content-center align-items-center">
+              <p>15</p>
+              <div>
+                <p>%</p>
+                <p>off</p>
+              </div>
+            </div>
+          </div>
+          <p>Ocean Blue Ring</p>
+          <div class="badge-orange">6 days Remaining</div>
+        </div>
+        <div class="item">
+          <div class="top">
+            <img src="./assest/image/discount-item-3.png.png" alt="Product 1">
+            <div class="discount-box d-flex justify-content-center align-items-center">
+              <p>15</p>
+              <div>
+                <p>%</p>
+                <p>off</p>
+              </div>
+            </div>
+          </div>
+          <p>Brown Leathered Wallet</p>
+          <div class="badge-orange">6 days Remaining</div>
+        </div>
+        <div class="item">
+          <div class="top">
+            <img src="./assest/image/discount-item-4.png.png" alt="Product 1">
+            <div class="discount-box d-flex justify-content-center align-items-center">
+              <p>15</p>
+              <div>
+                <p>%</p>
+                <p>off</p>
+              </div>
+            </div>
+          </div>
+          <p>Silverside Wristwatch</p>
+          <div class="badge-orange">6 days Remaining</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="work-section">
+    <div class="container">
+      <h2 class="text-center">How does it work</h2>
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="box">
+            <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/location.png" alt="">
+            <h3>Select location</h3>
+            <p>Choose the location where your food will be delivered.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="box">
+            <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/location.png" alt="">
+            <h3>Select location</h3>
+            <p>Choose the location where your food will be delivered.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="box">
+            <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/location.png" alt="">
+            <h3>Select location</h3>
+            <p>Choose the location where your food will be delivered.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="box">
+            <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/location.png" alt="">
+            <h3>Select location</h3>
+            <p>Choose the location where your food will be delivered.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--deneyelim bakalım-->
+
+  <section class="popular-section gx-4 gy-5">
+
+    <div class="container">
+      <h2 class="text-center">
+        Popular Items
+      </h2>
+      <div class="mySwiperWrapper">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card-span h-100 rounded-3">
+                <div class="card-title">
+                  <img src="./assest/image/cheese-burger.png" class="d-block rounded-3 w-100" alt="...">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Cheese Burger</h3>
+                  <span>
+                    <img src="./assest/image/location.png" width="15px" height="20px" alt="location" srcset="">
+                  </span>
+                  <span class="text-warning">
+                    Burger Arena
+                  </span>
+                  <div class="fw-bold">
+                    $3.99
+                  </div>
+                </div>
+                <div class="d-grid gap-2 rounded-4"><a class="btn btn-lg btn-orange text-white text-center fw-bold"
+                    href="#!" role="button">Order now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn btn-orange btn-custom-swiper swiper-button-next"></div>
+        <div class="btn btn-orange btn-custom-swiper swiper-button-prev"></div>
+      </div>
+
+
+    </div>
+    </div>
+  </section>
+
+
+
+
+  <!--deneyelim bakalım by Atakan-->
+
+  <section class="popular-section gx-4 gy-5">
+
+    <div class="container featuredRestorant">
+      <h2 class="text-center">
+        Featured Restaurants
+      </h2>
+      <div class="text">
+        <div class="row" id="card-container">
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="card">
+              <div class="absolute-box">
+                <div class="orange-label-box">
+                  <i class="fa-solid fa-tag"></i>
+                  <span>10% off</span>
+                </div>
+                <div class="yellow-label-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>fast</span>
+                </div>
+              </div>
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world.png"
+                class="card-img">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world-logo.png"
+                      class="card-logo" alt="...">
+                  </div>
+                  <div class="col-9 ">
+                    <h3 class="card-text">Donut Hut</h3>
+                    <div class="d-flex align-items-center score-box" style="gap: 5px;">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="mb-0">50</p>
+                    </div>
+
+                  </div>
+                  <div class="col-12">
+                    <div class="badge-orange">6 days Remaining</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="card">
+              <div class="absolute-box">
+                <div class="orange-label-box">
+                  <i class="fa-solid fa-tag"></i>
+                  <span>10% off</span>
+                </div>
+                <div class="yellow-label-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>fast</span>
+                </div>
+              </div>
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world.png"
+                class="card-img">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world-logo.png"
+                      class="card-logo" alt="...">
+                  </div>
+                  <div class="col-9 ">
+                    <h3 class="card-text">Donut Hut</h3>
+                    <div class="d-flex align-items-center score-box" style="gap: 5px;">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="mb-0">50</p>
+                    </div>
+
+                  </div>
+                  <div class="col-12">
+                    <div class="badge-orange">6 days Remaining</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="card">
+              <div class="absolute-box">
+                <div class="orange-label-box">
+                  <i class="fa-solid fa-tag"></i>
+                  <span>10% off</span>
+                </div>
+                <div class="yellow-label-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>fast</span>
+                </div>
+              </div>
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world.png"
+                class="card-img">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world-logo.png"
+                      class="card-logo" alt="...">
+                  </div>
+                  <div class="col-9 ">
+                    <h3 class="card-text">Donut Hut</h3>
+                    <div class="d-flex align-items-center score-box" style="gap: 5px;">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="mb-0">50</p>
+                    </div>
+
+                  </div>
+                  <div class="col-12">
+                    <div class="badge-green">6 days Remaining</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="card">
+              <div class="absolute-box">
+                <div class="orange-label-box">
+                  <i class="fa-solid fa-tag"></i>
+                  <span>10% off</span>
+                </div>
+                <div class="yellow-label-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>fast</span>
+                </div>
+              </div>
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world.png"
+                class="card-img">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world-logo.png"
+                      class="card-logo" alt="...">
+                  </div>
+                  <div class="col-9 ">
+                    <h3 class="card-text">Donut Hut</h3>
+                    <div class="d-flex align-items-center score-box" style="gap: 5px;">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="mb-0">50</p>
+                    </div>
+
+                  </div>
+                  <div class="col-12">
+                    <div class="badge-orange">6 days Remaining</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="card">
+              <div class="absolute-box">
+                <div class="orange-label-box">
+                  <i class="fa-solid fa-tag"></i>
+                  <span>10% off</span>
+                </div>
+                <div class="yellow-label-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>fast</span>
+                </div>
+              </div>
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world.png"
+                class="card-img">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world-logo.png"
+                      class="card-logo" alt="...">
+                  </div>
+                  <div class="col-9 ">
+                    <h3 class="card-text">Donut Hut</h3>
+                    <div class="d-flex align-items-center score-box" style="gap: 5px;">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="mb-0">50</p>
+                    </div>
+
+                  </div>
+                  <div class="col-12">
+                    <div class="badge-orange">6 days Remaining</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="card">
+              <div class="absolute-box">
+                <div class="orange-label-box">
+                  <i class="fa-solid fa-tag"></i>
+                  <span>10% off</span>
+                </div>
+                <div class="yellow-label-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>fast</span>
+                </div>
+              </div>
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world.png"
+                class="card-img">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world-logo.png"
+                      class="card-logo" alt="...">
+                  </div>
+                  <div class="col-9 ">
+                    <h3 class="card-text">Donut Hut</h3>
+                    <div class="d-flex align-items-center score-box" style="gap: 5px;">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="mb-0">50</p>
+                    </div>
+
+                  </div>
+                  <div class="col-12">
+                    <div class="badge-orange">6 days Remaining</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="card">
+              <div class="absolute-box">
+                <div class="orange-label-box">
+                  <i class="fa-solid fa-tag"></i>
+                  <span>10% off</span>
+                </div>
+                <div class="yellow-label-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>fast</span>
+                </div>
+              </div>
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world.png"
+                class="card-img">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world-logo.png"
+                      class="card-logo" alt="...">
+                  </div>
+                  <div class="col-9 ">
+                    <h3 class="card-text">Donut Hut</h3>
+                    <div class="d-flex align-items-center score-box" style="gap: 5px;">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="mb-0">50</p>
+                    </div>
+
+                  </div>
+                  <div class="col-12">
+                    <div class="badge-orange">6 days Remaining</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4">
+            <div class="card">
+              <div class="absolute-box">
+                <div class="orange-label-box">
+                  <i class="fa-solid fa-tag"></i>
+                  <span>10% off</span>
+                </div>
+                <div class="yellow-label-box">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>fast</span>
+                </div>
+              </div>
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world.png"
+                class="card-img">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/food-world-logo.png"
+                      class="card-logo" alt="...">
+                  </div>
+                  <div class="col-9 ">
+                    <h3 class="card-text">Donut Hut</h3>
+                    <div class="d-flex align-items-center score-box" style="gap: 5px;">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="mb-0">50</p>
+                    </div>
+
+                  </div>
+                  <div class="col-12">
+                    <div class="badge-orange">6 days Remaining</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="d-flex justify-content-center mb-4 mt-2">
+        <button id="view-all-btn" class="btn btn-orange">View All > </button>
+      </div>
+
+
+  </section>
+
+  <section class="application-section">
+    <div class="container">
+      <div class="campaings-box">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="item">
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/icons/discounts.png" alt="">
+              <p class="gradient-text">
+                Daily <br>
+                Discounts
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="item">
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/icons/discounts.png" alt="">
+              <p class="gradient-text">
+                Daily <br>
+                Discounts
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="item">
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/icons/discounts.png" alt="">
+              <p class="gradient-text">
+                Daily <br>
+                Discounts
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-app-box">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/phone-cta-one.png"
+              class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6">
+            <h2>Install the app</h2>
+            <p class="muted-text">It's never been easier to order food. Look for the finest 
+              discounts and you'll be lost in a world of delectable food.</p>
+            <div class="d-flex gap-3">
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/app-store.svg" alt="">
+              <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/google-play.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="food-section">
+    <div class="text-center">
+      <h2 class="text-white ">Are you ready to order <br>
+        with the best deals?</h2>
+      <button class="btn btn-orange mt-4">PROCEED TO ORDER <i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+    integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(".burger-menu").click(() => {
+      $(".mobile-menu-box").toggleClass("open");
+    })
+
+
+
+
+    const sliderObj = {
+      spaceBetween: 15,
+      loop: true,
+      mousewheel: true,
+      slidesPerView: 2,
+      spaceBetween: 15,
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 5,
+        },
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    }
+
+
+
+
+
+
+    var swiper = new Swiper(".mySwiper", sliderObj);
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
